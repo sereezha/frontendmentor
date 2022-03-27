@@ -1,0 +1,156 @@
+:root {
+  --accent: #53ffaa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  padding: 15px;
+  margin: 0;
+  font-weight: 800;
+  font-family: 'Manrope', sans-serif;
+  background-color: #202733;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.advice {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 540px;
+  min-height: 280px;
+  margin: auto;
+  text-align: center;
+  padding: 48px 48px 72px;
+  background-color: #313a48;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+  border-radius: 15px;
+}
+
+.advice__title {
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: 4.08px;
+  color: var(--accent);
+}
+
+.advice__text {
+  margin-bottom: 40px;
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  color: #cee3e9;
+}
+
+.advice__divider {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.advice__divider-center {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 16px;
+}
+
+.advice__divider-center-line {
+  width: 6px;
+  height: 16px;
+  background: #cee3e9;
+  border-radius: 3px;
+}
+
+.advice__divider-center-line:first-child {
+  margin-right: 8px;
+}
+
+.advice__divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background: #4f5d74;
+}
+
+.advice__button {
+  --size: 64px;
+  position: absolute;
+  bottom: calc(var(--size) / 2 * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+.advice__button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: 0 0 40px var(--accent);
+}
+
+.advice__button:hover::before {
+  opacity: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.attribution,
+.attribution a {
+  color: #fff;
+}
+
+@media screen and (max-width: 639px) {
+  .advice {
+    padding: 24px 24px 64px;
+  }
+
+  .advice__title {
+    font-size: 11px;
+  }
+
+  .advice__text {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+}
