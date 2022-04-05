@@ -8,9 +8,6 @@ const card = document.querySelector(".js-card");
 const cardContent = document.querySelector(".js-card-content");
 const submitButton = document.querySelector(".js-submit-button");
 const ratingNumbers = document.querySelectorAll(".js-rating-number");
-const cardCompletionTemplate = document.querySelectorAll(
-  ".js-card-completion-template"
-);
 
 let prevSelectedRatingNumber;
 
