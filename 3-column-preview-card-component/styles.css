@@ -1,0 +1,175 @@
+:root {
+  --transition-duration: 0.2s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.66;
+  font-family: 'Lexend Deca', sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #f2f2f2;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards {
+  display: flex;
+  max-width: 920px;
+  width: 100%;
+  margin: auto;
+}
+
+.card {
+  --border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  padding: 48px;
+  background-color: var(--card-accent);
+}
+
+.card:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.card:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.card .card__link {
+  color: var(--card-accent);
+}
+
+.card--sedans {
+  --card-accent: #e28625;
+}
+
+.card--suvs {
+  --card-accent: #006971;
+}
+
+.card--luxury {
+  --card-accent: #004140;
+}
+
+.card__image {
+  margin-bottom: 35px;
+}
+
+.card__title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+  font-size: 40px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.card__description {
+  margin-bottom: 15px;
+}
+
+.card__link {
+  margin-top: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  min-width: 100px;
+  padding: 11px 31px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  align-self: flex-start;
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card__link:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.attribution,
+.attribution a {
+  color: #004140;
+}
+
+@media screen and (max-width: 1000px) {
+  .cards {
+    display: block;
+    max-width: 327px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card:first-child {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: 0;
+  }
+
+  .card:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius);
+  }
+}
