@@ -124,8 +124,10 @@ h1 {
   box-shadow: 0 0 40px var(--accent);
 }
 
-.advice__button:hover::before {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .advice__button:hover::before {
+    opacity: 1;
+  }
 }
 
 .attribution {

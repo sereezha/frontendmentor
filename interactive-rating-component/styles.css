@@ -122,9 +122,11 @@ button {
   background-color: #7c8798;
 }
 
-.card__rating-number:hover:not(.card__rating-number--selected) {
-  background-color: var(--accent-color);
-  color: #fff;
+@media (hover: hover) and (pointer: fine) {
+  .card__rating-number:hover:not(.card__rating-number--selected) {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
 }
 
 .card__submit-button {
@@ -146,9 +148,11 @@ button {
   transition-duration: var(--transition-duration);
 }
 
-.card__submit-button:hover {
-  background-color: #fff;
-  color: var(--accent-color);
+@media (hover: hover) and (pointer: fine) {
+  .card__submit-button:hover {
+    background-color: #fff;
+    color: var(--accent-color);
+  }
 }
 
 .card--completion .card__content {
