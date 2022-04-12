@@ -56,8 +56,10 @@ a {
   transition-duration: var(--transition-duration);
 }
 
-a:hover {
-  color: var(--accent-color);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--accent-color);
+  }
 }
 
 .card {
@@ -102,9 +104,11 @@ a:hover {
   opacity: 0;
 }
 
-.card__image:hover::before,
-.card__image:hover .card__image-icon {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .card__image:hover::before,
+  .card__image:hover .card__image-icon {
+    opacity: 1;
+  }
 }
 
 .card__title {
