@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Job Listings</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        class="header__image header__image--desktop"
+        src="./images/bg-header-desktop.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        class="header__image header__image--mobile"
+        src="./images/bg-header-mobile.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
+    <div class="container">
+      <div class="tags-container tags-container--hidden card">
+        <ul class="tags-container__list tags-list js-filter-tags-list"></ul>
+        <button
+          class="tags-container__clear-button js-clear-tags-button"
+          type="button"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="jobs-list-container" id="jobs-list-container"></div>
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/sereezha"
+          target="_blank"
+          rel="noreferrer noopener"
+          >sereezha</a
+        >.
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
