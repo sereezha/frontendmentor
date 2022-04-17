@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Calculator App</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body data-theme="1">
+    <div class="calculator">
+      <div class="calculator__header">
+        <h1 class="calculator__title">Calc</h1>
+        <div class="calculator__theme-switcher-wrapper">
+          <p class="calculator__theme-switcher-title">Theme</p>
+          <div class="calculator__theme-toggle-wrapper">
+            <button
+              class="calculator__theme-toggle js-theme-toggle-button" data-theme-toggle="1"
+              aria-label="Enable dark theme"
+            ></button>
+            <button
+              class="calculator__theme-toggle js-theme-toggle-button" data-theme-toggle="2"
+              aria-label="Enable light theme"
+            ></button>
+            <button
+              class="calculator__theme-toggle js-theme-toggle-button" data-theme-toggle="3"
+              aria-label="Enable synthwave theme"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <div class="calculator__screen">
+        <p class="calculator__previous-operand js-previous-operand"></p>
+        <p class="calculator__current-operand js-current-operand"></p>
+      </div>
+      <div class="calculator__buttons">
+        <button type="button" class="calculator__button js-number-button">
+          7</button
+        ><button type="button" class="calculator__button js-number-button">
+          8</button
+        ><button type="button" class="calculator__button js-number-button">
+          9</button
+        ><button
+          type="button"
+          class="calculator__button calculator__button--word js-delete-button"
+        >
+          DEL</button
+        ><button type="button" class="calculator__button js-number-button">
+          4</button
+        ><button type="button" class="calculator__button js-number-button">
+          5</button
+        ><button type="button" class="calculator__button js-number-button">
+          6</button
+        ><button type="button" class="calculator__button" data-operator="+">
+          +</button
+        ><button type="button" class="calculator__button js-number-button">
+          1</button
+        ><button type="button" class="calculator__button js-number-button">
+          2</button
+        ><button type="button" class="calculator__button js-number-button">
+          3</button
+        ><button type="button" class="calculator__button" data-operator="-">
+          -</button
+        ><button type="button" class="calculator__button js-number-button">
+          .</button
+        ><button type="button" class="calculator__button js-number-button">
+          0</button
+        ><button type="button" class="calculator__button" data-operator="/">
+          /</button
+        ><button type="button" class="calculator__button" data-operator="*">
+          ×
+        </button>
+        <button
+          data-reset
+          type="button"
+          class="calculator__button calculator__button--reset calculator__button--word js-reset-button"
+        >
+          RESET
+        </button>
+        <button
+          data-equal
+          type="button"
+          class="calculator__button calculator__button--equal calculator__button--accent js-equals-button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noreferrer noopener"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/sereezha"
+        target="_blank"
+        rel="noreferrer noopener"
+        >sereezha</a
+      >.
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
