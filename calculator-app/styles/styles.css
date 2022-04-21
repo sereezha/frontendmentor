@@ -13,7 +13,7 @@ html {
   box-sizing: border-box;
 }
 
-[data-theme='1'] {
+[data-theme="dark"] {
   --main-background: hsl(222, 26%, 31%);
   --secondary-background: hsl(223, 31%, 20%);
   --screen-background: hsl(224, 36%, 15%);
@@ -32,7 +32,7 @@ html {
   --key-color: hsl(221, 14%, 31%);
 }
 
-[data-theme='2'] {
+[data-theme="light"] {
   --main-background: hsl(0, 0%, 90%);
   --secondary-background: hsl(0, 5%, 81%);
   --screen-background: hsl(0, 0%, 93%);
@@ -51,7 +51,7 @@ html {
   --key-color: hsl(60, 10%, 19%);
 }
 
-[data-theme="3"] {
+[data-theme="synthwave"] {
   --main-background: hsl(268, 75%, 9%);
   --secondary-background: hsl(268, 71%, 12%);
   --screen-background: hsl(268, 71%, 12%);
@@ -69,7 +69,6 @@ html {
   --text-color: hsl(52, 100%, 62%);
   --key-color: hsl(52, 100%, 62%);
 }
-
 
 body {
   padding: 30px 15px;
@@ -183,16 +182,16 @@ button {
   background-color: var(--ternary-background-hover);
 }
 
-[data-theme="1"] .calculator__theme-toggle-wrapper::before {
+[data-theme="dark"] .calculator__theme-toggle-wrapper::before {
   transform: translateX(0) translateY(-50%);
 }
 
-[data-theme="2"] .calculator__theme-toggle-wrapper::before {
+[data-theme="light"] .calculator__theme-toggle-wrapper::before {
   --translateX: calc(var(--theme-toggle-size) + var(--theme-toggle-wrapper-gap));
   transform: translateX(var(--translateX)) translateY(-50%);
 }
 
-[data-theme="3"] .calculator__theme-toggle-wrapper::before {
+[data-theme="synthwave"] .calculator__theme-toggle-wrapper::before {
   --translateX: calc((var(--theme-toggle-size) + var(--theme-toggle-wrapper-gap))*2);
   transform: translateX(var(--translateX)) translateY(-50%);
 }
@@ -260,7 +259,6 @@ button {
 .calculator__buttons {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  /* grid-template-rows: repeat(4, minmax(64px, auto)); */
   gap: 24px;
   padding: 32px;
   border-radius: var(--border-radius);
@@ -304,9 +302,9 @@ button {
   background-color: var(--button-secondary-background-hover);
 }
 
-[data-theme="1"] .calculator__button--word,
-[data-theme="2"] .calculator__button--word,
-[data-theme="3"] .calculator__button--word {
+[data-theme="dark"] .calculator__button--word,
+[data-theme="light"] .calculator__button--word,
+[data-theme="synthwave"] .calculator__button--word {
   color: hsl(0, 0%, 100%);
 }
 
@@ -320,11 +318,11 @@ button {
   background-color: var(--ternary-background-hover);
 }
 
-[data-theme="2"] .calculator__button--equal {
+[data-theme="light"] .calculator__button--equal {
   color: hsl(0, 0%, 100%);
 }
 
-[data-theme="3"] .calculator__button--equal {
+[data-theme="synthwave"] .calculator__button--equal {
   color: hsla(198, 20%, 13%, 1);
 }
 
