@@ -222,6 +222,7 @@ a {
 
   content: '';
   position: absolute;
+  z-index: -1;
   top: var(--offset);
   left: var(--offset);
   right: var(--offset);
