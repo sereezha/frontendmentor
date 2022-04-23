@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./libs/leafletjs/leaflet.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <div class="search-form-wrapper">
+        <form class="search js-search-form">
+          <input
+            class="search__input js-search-input"
+            type="text"
+            inputmode="search"
+            placeholder="Search for any IP address or domain"
+          />
+          <button
+            type="submit"
+            class="search__button button js-search-button"
+            aria-label="Submit search"
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="11"
+              height="14"
+            >
+              <path fill="none" stroke-width="3" d="M2 1l6 6-6 6" />
+            </svg>
+          </button>
+        </form>
+        <div class="search__error search__error--hidden js-search-error">
+          Error: please enter correct ip or domain address
+        </div>
+      </div>
+      <div class="info">
+        <div class="info__row">
+          <div class="info__item">
+            <div class="info__item-title">ip address</div>
+            <div class="info__item-value js-ip-address">-</div>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">Location</div>
+            <div class="info__item-value js-location">-</div>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">Timezone</div>
+            <div class="info__item-value js-timezone">-</div>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">ISP</div>
+            <div class="info__item-value js-isp">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map" id="map"></div>
+    <script src="./libs/leafletjs/leaflet.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
