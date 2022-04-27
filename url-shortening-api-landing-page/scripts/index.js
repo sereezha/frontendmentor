@@ -175,7 +175,7 @@ const navVisibilityMap = {
   false: showNav,
 };
 
-const handleMenuButtonClick = (event) => {
+const handleMenuButtonClick = () => {
   const isNavVisible = mobileNavigation.getAttribute("data-visible");
 
   navVisibilityMap[isNavVisible]();
