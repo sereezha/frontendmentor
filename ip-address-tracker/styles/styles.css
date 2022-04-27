@@ -109,8 +109,11 @@ a {
 
 .search__error {
   font-size: 13px;
+  padding: 5px;
   margin-top: 5px;
-  color: aliceblue;
+  background-color: #fff;
+  color: red;
+  border-radius: 5px;
 }
 
 .search__error--hidden {
