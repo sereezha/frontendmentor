@@ -130,6 +130,18 @@ ul {
   object-fit: cover;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.attribution,
+.attribution a {
+  color: #fff;
+}
+
 @media screen and (max-width: 1000px) {
   .card {
     max-width: 500px;
