@@ -1,0 +1,249 @@
+:root {
+  --accent-color: hsl(263, 55%, 52%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 15px;
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 1.38;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(0, 0%, 81%);
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards {
+  max-width: 1110px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one one two five"
+    "three four four five";
+  gap: 30px;
+  margin: auto;
+}
+
+.card {
+  padding: 26px 32px 32px;
+  border-radius: 8px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.24);
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+
+.card:nth-child(2) {
+  grid-area: two;
+}
+
+.card:nth-child(3) {
+  grid-area: three;
+}
+
+.card:nth-child(4) {
+  grid-area: four;
+}
+
+.card:nth-child(5) {
+  grid-area: five;
+}
+
+.card--accent {
+  position: relative;
+  background-color: var(--accent-color);
+}
+
+.card--accent>* {
+  position: relative;
+  z-index: 1;
+}
+
+.card--accent .card__avatar {
+  --border-size: 2px;
+
+  position: relative;
+}
+
+.card--accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 80px;
+  width: 104px;
+  height: 102px;
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.card--accent .card__avatar::before {
+  --offset: calc(var(--border-size) * -1);
+
+  content: '';
+  position: absolute;
+  top: var(--offset);
+  left: var(--offset);
+  right: var(--offset);
+  bottom: var(--offset);
+  z-index: -1;
+  background-color: hsl(264, 82%, 70%);
+  border-radius: 50%;
+}
+
+.card--accent .card__avatar {
+  position: relative;
+}
+
+.card--accent .card__avatar {
+  isolation: isolate;
+}
+
+.card--white .card__header-name,
+.card--white .card__header-about,
+.card--white .card__title,
+.card--white .card__description {
+  color: hsla(217, 19%, 35%, 1);
+}
+
+.card--white {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.card--white .card__title {
+  margin-bottom: 24px;
+}
+
+.card--gray {
+  background-color: hsla(217, 19%, 35%, 1);
+}
+
+.card--dark {
+  background-color: hsla(219, 29%, 14%, 1);
+}
+
+.card__header {
+  --spacer: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: var(--spacer);
+  margin-bottom: var(--spacer);
+}
+
+.card__avatar {
+  --avatar-size: 28px;
+
+  flex-shrink: 0;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.card__avatar img {
+  border-radius: 50%;
+}
+
+.card__header-info {
+  color: hsl(0, 0%, 100%);
+  line-height: 1;
+}
+
+.card__header-name {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.card__header-about {
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+.card__title {
+  margin-bottom: 16px;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.attribution,
+.attribution a {
+  color: hsla(217, 19%, 35%, 1);
+}
+
+@media screen and (max-width: 1000px) {
+  .cards {
+    grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .cards {
+    gap: 24px;
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .cards {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+
+  .card--accent::before {
+    right: 24px;
+  }
+}
