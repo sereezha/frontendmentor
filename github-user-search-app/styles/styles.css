@@ -463,7 +463,6 @@ a {
 .profile__contacts {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .profile__contacts-col {
