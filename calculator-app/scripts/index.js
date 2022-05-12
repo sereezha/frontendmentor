@@ -8,7 +8,7 @@ const operands = document.querySelectorAll(".js-number-button");
 const CANNOT_DIVIDE_BY_ZERO_TEXT = "You cannot divide by zero";
 
 let currentOperand = "";
-let previousOperand = 0;
+let previousOperand = null;
 let operation = "";
 
 const handleReset = () => {
@@ -34,11 +34,12 @@ const calculate = (number1, number2, operation) => {
 };
 
 const updateCurrentOperandValue = (val) => {
+  const value = val.trim();
   if (currentOperandEl.innerHTML === CANNOT_DIVIDE_BY_ZERO_TEXT) {
     currentOperandEl.innerHTML = "";
   }
-  currentOperandEl.innerHTML += val;
-  currentOperand += val;
+  currentOperandEl.innerHTML += value;
+  currentOperand += value;
 };
 
 const handleDeleteOperation = () => {
@@ -61,7 +62,8 @@ const handleEqualOperation = () => {
   previousOperand = 0;
   currentOperand = result;
   previousOperandEl.innerHTML = "";
-  currentOperandEl.innerHTML = !result ? CANNOT_DIVIDE_BY_ZERO_TEXT : result;
+  currentOperandEl.innerHTML =
+    result === "" ? CANNOT_DIVIDE_BY_ZERO_TEXT : result;
 };
 
 const handleOperatorClick = (currOperation) => {
@@ -119,7 +121,7 @@ const handleKeyUp = (event) => {
       break;
     case "=":
     case "Enter":
-      if (previousOperand && currentOperand) {
+      if (previousOperand !== null && currentOperand) {
         handleEqualOperation();
       }
       break;
@@ -154,7 +156,12 @@ const THEMES = {
 
 const themeToggleButtons = document.querySelectorAll(".js-theme-toggle-button");
 const handleThemeToggle = (event) => {
-  const theme = event.target.dataset["themeToggle"];
+  themeToggleButtons.forEach((item) => {
+    item.setAttribute("aria-checked", false);
+  });
+  const { target } = event;
+  target.setAttribute("aria-checked", true);
+  const theme = target.dataset["themeToggle"];
   setPreference(LOCAL_STORAGE_KEY, theme);
 };
 
@@ -183,6 +190,10 @@ const theme = {
 };
 
 const setThemeOnLoad = (value) => {
+  themeToggleButtons.forEach((item) => {
+    const isActive = item.getAttribute("data-theme-toggle") === value;
+    if (isActive) item.setAttribute("aria-checked", true);
+  });
   document.body.setAttribute("data-theme", value);
 };
 
