@@ -1,8 +1,8 @@
 // BEGIN Menu nav toggle
 
 const nav = document.querySelector(".js-nav");
-const mobileMenuButton = document.querySelector(".js-mobile-menu-button");
-const menuButton = document.querySelector(".js-menu-button");
+const closeMenuButton = document.querySelector(".js-close-menu-button");
+const showMenuButton = document.querySelector(".js-open-menu-button");
 const { body } = document;
 
 const CLASSES = {
@@ -13,15 +13,19 @@ const CLASSES = {
 const showNav = () => {
   nav.classList.add(CLASSES.navActive);
   body.classList.add(CLASSES.noScroll);
+  closeMenuButton.setAttribute('aria-expanded', true);
+  showMenuButton.setAttribute('aria-expanded', true);
 };
 
 const hideNav = () => {
   nav.classList.remove(CLASSES.navActive);
   body.classList.remove(CLASSES.noScroll);
+  closeMenuButton.setAttribute('aria-expanded', false);
+  showMenuButton.setAttribute('aria-expanded', false);
 };
 
-mobileMenuButton.addEventListener("click", hideNav);
-menuButton.addEventListener("click", showNav);
+closeMenuButton.addEventListener("click", hideNav);
+showMenuButton.addEventListener("click", showNav);
 
 // END Menu nav toggle
 
