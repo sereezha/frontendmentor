@@ -111,10 +111,14 @@ const renderCreatedShortenedUrl = (data) => {
 const showError = (text) => {
   errorTextEl.innerHTML = text;
   formEl.classList.add("shortener-form--error");
+  inputEl.setAttribute("aria-describedby", "input-validation-message");
+  inputEl.setAttribute("aria-invalid", true);
 };
 
 const hideError = () => {
   formEl.classList.remove("shortener-form--error");
+  inputEl.removeAttribute("aria-describedby");
+  inputEl.setAttribute("aria-invalid", false);
 };
 
 const handleFormSubmit = (event) => {

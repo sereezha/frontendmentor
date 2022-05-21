@@ -23,10 +23,14 @@ const validateURL = (value) => REGEX.url.test(value);
 
 const showError = () => {
   formError.classList.remove(CLASSES.searchErrorHidden);
+  formInput.setAttribute("aria-describedby", "input-validation-message");
+  formInput.setAttribute("aria-invalid", true);
 };
 
 const hideError = () => {
   formError.classList.add(CLASSES.searchErrorHidden);
+  formInput.removeAttribute("aria-describedby");
+  formInput.setAttribute("aria-invalid", false);
 };
 
 let prevInputValue = "";

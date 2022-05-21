@@ -33,6 +33,10 @@ const formatDate = (date) => {
   return fullDate;
 };
 
+const searchForm = document.querySelector(".js-search-form");
+const searchInput = searchForm.querySelector(".js-search-input");
+const searchButton = searchForm.querySelector(".js-search-button");
+
 const avatar = document.querySelector(".js-profile-avatar");
 const profileName = document.querySelector(".js-profile-name");
 const profileUsername = document.querySelector(".js-profile-username");
@@ -166,8 +170,12 @@ const profileEl = document.querySelector(".js-profile");
 
 const handleNoResultsVisibility = (shouldShow) => {
   if (shouldShow) {
+    searchInput.setAttribute("aria-describedby", "input-validation-message");
+    searchInput.setAttribute("aria-invalid", true);
     searchNoResultsEl.classList.remove(STATE_CLASSES.searchNoResultsHidden);
   } else {
+    searchInput.removeAttribute("aria-describedby");
+    searchInput.setAttribute("aria-invalid", false);
     searchNoResultsEl.classList.add(STATE_CLASSES.searchNoResultsHidden);
   }
 };
@@ -198,17 +206,13 @@ const fetchUser = async (username, apiURL = API_URL) => {
   handleHideError();
 };
 
-const searchForm = document.querySelector(".js-search-form");
-const searchInput = searchForm.querySelector(".js-search-input");
-const searchButton = searchForm.querySelector(".js-search-button");
-
 const handleSearchInput = () => {
   const isNoResultsTextVisible = !searchNoResultsEl.classList.contains(
     STATE_CLASSES.searchNoResultsHidden
   );
 
   if (isNoResultsTextVisible) {
-    handleNoResultsVisibility(false)
+    handleNoResultsVisibility(false);
   }
 };
 

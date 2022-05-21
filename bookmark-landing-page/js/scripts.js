@@ -13,15 +13,15 @@ const CLASSES = {
 const showNav = () => {
   nav.classList.add(CLASSES.navActive);
   body.classList.add(CLASSES.noScroll);
-  closeMenuButton.setAttribute('aria-expanded', true);
-  showMenuButton.setAttribute('aria-expanded', true);
+  closeMenuButton.setAttribute("aria-expanded", true);
+  showMenuButton.setAttribute("aria-expanded", true);
 };
 
 const hideNav = () => {
   nav.classList.remove(CLASSES.navActive);
   body.classList.remove(CLASSES.noScroll);
-  closeMenuButton.setAttribute('aria-expanded', false);
-  showMenuButton.setAttribute('aria-expanded', false);
+  closeMenuButton.setAttribute("aria-expanded", false);
+  showMenuButton.setAttribute("aria-expanded", false);
 };
 
 closeMenuButton.addEventListener("click", hideNav);
@@ -237,10 +237,14 @@ const handleFormSuccess = () => {
 
 const hideError = () => {
   form.classList.remove(FORM_CLASSES.formInvalid);
+  input.removeAttribute("aria-describedby");
+  input.setAttribute("aria-invalid", false);
 };
 
 const handleFormError = () => {
   form.classList.add(FORM_CLASSES.formInvalid);
+  input.setAttribute("aria-describedby", "input-validation-message");
+  input.setAttribute("aria-invalid", true);
   validationInfo.innerText = VALIDATION_TEXTS.invalid;
 };
 

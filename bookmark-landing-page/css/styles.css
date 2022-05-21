@@ -519,6 +519,10 @@ body.no-scroll {
   border: none;
 }
 
+.cta-form__input:focus-visible {
+  outline: 2px dashed var(--accent-color);
+}
+
 .cta-form__input::placeholder {
   color: hsla(229, 31%, 21%, 0.25);
   opacity: 1;
