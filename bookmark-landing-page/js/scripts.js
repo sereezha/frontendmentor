@@ -96,11 +96,12 @@ const ACCORDION_KEY_CODES = {
 };
 
 const handleAccordionHeaderKeyDown = (event) => {
-  event.preventDefault();
   const shouldTrigger = Object.values(ACCORDION_KEY_CODES).includes(
     event.keyCode
   );
+
   if (shouldTrigger) {
+    event.preventDefault();
     handleAccordionHeaderClick(event);
   }
 };
