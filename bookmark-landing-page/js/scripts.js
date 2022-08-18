@@ -75,7 +75,7 @@ const handleAccordionHeaderClick = (event) => {
 
   const isCollapsed = header.getAttribute("aria-expanded") === "false" || false;
 
-  if (isOnlyOneExpanded && lastExpanded) {
+  if (isOnlyOneExpanded && lastExpanded && isCollapsed) {
     const content = lastExpanded.querySelector(`.${ACCORDION_CLASSES.content}`);
     const header = lastExpanded.querySelector(`.${ACCORDION_CLASSES.header}`);
     hideAccordionContent(lastExpanded, header, content);
