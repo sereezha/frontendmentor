@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="visibility: hidden">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 8 4"
+        id="chevron-up"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 4L4 0L8 4H0Z"
+        ></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="fb">
+        <path
+          d="M18.9 0H1.1C.5 0 0 .5 0 1.1v17.8c0 .6.5 1.1 1.1 1.1h9.58v-7.74h-2.6V9.24h2.6V7c0-2.58 1.58-3.99 3.89-3.99 1.1 0 2.05.08 2.32.12v2.7h-1.6c-1.25 0-1.49.6-1.49 1.47v1.93h2.99l-.39 3.02h-2.6V20h5.1c.6 0 1.1-.5 1.1-1.1V1.1c0-.6-.5-1.1-1.1-1.1Z"
+        ></path>
+      </symbol>
+      <defs>
+        <linearGradient
+          id="inst-gradient"
+          x1="10"
+          y1="-10"
+          x2="-10"
+          y2="10"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#DF4896" />
+          <stop offset=".51" stop-color="#EE877E" />
+          <stop offset="1" stop-color="#FDC366" />
+        </linearGradient>
+      </defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="inst">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M10 0C7.28 0 6.94.01 5.88.06 2.25.23.23 2.24.06 5.88.01 6.94 0 7.28 0 10s.01 3.06.06 4.12c.17 3.63 2.18 5.65 5.82 5.82 1.06.05 1.4.06 4.12.06s3.06-.01 4.12-.06c3.63-.17 5.65-2.18 5.82-5.82.05-1.06.06-1.4.06-4.12s-.01-3.06-.06-4.12C19.78 2.25 17.76.23 14.12.06 13.06.01 12.72 0 10 0Zm0 1.8c2.67 0 2.99.01 4.04.06 2.71.12 3.98 1.41 4.1 4.1.05 1.05.06 1.37.06 4.04s-.01 2.99-.06 4.04c-.12 2.69-1.39 3.98-4.1 4.1a69.1 69.1 0 0 1-4.04.06c-2.67 0-2.99-.01-4.04-.06-2.72-.12-3.98-1.41-4.1-4.1A69.15 69.15 0 0 1 1.8 10a70 70 0 0 1 .06-4.04c.12-2.69 1.39-3.98 4.1-4.1C7 1.81 7.33 1.8 10 1.8ZM4.87 10a5.14 5.14 0 1 1 10.27 0 5.14 5.14 0 0 1-10.28 0ZM10 13.33a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66Zm4.14-8.67a1.2 1.2 0 1 1 2.4 0 1.2 1.2 0 0 1-2.4 0Z"
+          fill="url(#inst-gradient)"
+        />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" id="tw">
+        <path
+          d="M20 1.92a8.2 8.2 0 0 1-2.36.65c.85-.5 1.5-1.31 1.8-2.27-.79.47-1.66.81-2.6 1a4.1 4.1 0 0 0-7 3.74C6.45 4.87 3.43 3.24 1.4.75a4.1 4.1 0 0 0 1.27 5.48C2 6.2 1.36 6.03.8 5.72a4.1 4.1 0 0 0 3.3 4.07c-.58.16-1.21.2-1.86.07a4.1 4.1 0 0 0 3.83 2.85A8.25 8.25 0 0 1 0 14.41a11.62 11.62 0 0 0 6.29 1.84c7.62 0 11.92-6.43 11.66-12.2.8-.58 1.5-1.3 2.05-2.13Z"
+        ></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="yt">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.7 14.08c-1.75.12-5.65.12-7.4 0-1.9-.13-2.12-1.06-2.13-4.08.01-3.02.23-3.95 2.13-4.08 1.75-.12 5.65-.12 7.4 0 1.9.13 2.12 1.06 2.13 4.08-.01 3.02-.23 3.95-2.13 4.08ZM12.43 10l-4.1-1.95v3.9l4.1-1.95Z"
+        ></path>
+      </symbol>
+    </svg>
+    <main>
+      <div class="container content">
+        <header class="header">
+          <div class="header__text">
+            <h1 class="heading" data-type="heading-2">
+              Social Media Dashboard
+            </h1>
+            <p>Total Followers: 23,004</p>
+          </div>
+          <div class="theme-toggle">
+            <div class="theme-toggle__text">Dark Mode</div>
+            <button
+              class="theme-toggle__button"
+              id="theme-toggle"
+              title="Toggles light & dark"
+              aria-label="auto"
+              aria-live="polite"
+            ></button>
+          </div>
+        </header>
+        <ul class="followers-cards row" role="list">
+          <li>
+            <div class="followers-card card" data-social="facebook">
+              <h3 class="visually-hidden">Facebook followers statistics</h3>
+              <div class="followers-card__header">
+                <svg
+                  class="fb-icon"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                >
+                  <use xlink:href="#fb"></use>
+                </svg>
+                <a href="https://facebook.com">@nathanf</a>
+              </div>
+              <div class="followers-card__amount">
+                <div class="heading" data-type="heading-0">1987</div>
+                <div class="followers-card__title">Followers</div>
+              </div>
+              <div class="stats-progress" data-type="up">
+                <svg width="8" height="4" viewBox="0 0 8 4">
+                  <use xlink:href="#chevron-up"></use>
+                </svg>
+                <span class="visually-hidden">Increased by</span>
+                12 Today
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="followers-card card" data-social="twitter">
+              <h3 class="visually-hidden">Twitter followers statistics</h3>
+              <div class="followers-card__header">
+                <svg
+                  class="tw-icon"
+                  aria-hidden="true"
+                  width="20"
+                  height="16"
+                  viewBox="0 0 20 16"
+                >
+                  <use xlink:href="#tw"></use>
+                </svg>
+                <a href="https://twitter.com">@nathanf</a>
+              </div>
+              <div class="followers-card__amount">
+                <div class="heading" data-type="heading-0">1044</div>
+                <div class="followers-card__title">Followers</div>
+              </div>
+              <div class="stats-progress" data-type="up">
+                <svg width="8" height="4" viewBox="0 0 8 4">
+                  <use xlink:href="#chevron-up"></use>
+                </svg>
+                <span class="visually-hidden">Increased by</span>
+                99 Today
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="followers-card card" data-social="instagram">
+              <h3 class="visually-hidden">Instagram followers statistics</h3>
+              <div class="followers-card__header">
+                <svg
+                  class="inst-icon"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                >
+                  <use xlink:href="#inst"></use>
+                </svg>
+                <a href="https://instagram.com">@realnathanf</a>
+              </div>
+              <div class="followers-card__amount">
+                <div class="heading" data-type="heading-0">11k</div>
+                <div class="followers-card__title">Followers</div>
+              </div>
+              <div class="stats-progress" data-type="up">
+                <svg width="8" height="4" viewBox="0 0 8 4">
+                  <use xlink:href="#chevron-up"></use>
+                </svg>
+                <span class="visually-hidden">Increased by</span>
+                1099 Today
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="followers-card card" data-social="youtube">
+              <h3 class="visually-hidden">Youtube followers statistics</h3>
+              <div class="followers-card__header">
+                <svg
+                  class="yt-icon"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                >
+                  <use xlink:href="#yt"></use>
+                </svg>
+                <a href="https://youtube.com">Nathan F.</a>
+              </div>
+              <div class="followers-card__amount">
+                <div class="heading" data-type="heading-0">8239</div>
+                <div class="followers-card__title">Followers</div>
+              </div>
+              <div class="stats-progress" data-type="down">
+                <svg width="8" height="4" viewBox="0 0 8 4">
+                  <use xlink:href="#chevron-up"></use>
+                </svg>
+                <span class="visually-hidden">Increased by</span>
+                144 Today
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="overview-section">
+          <h2 class="heading" data-type="heading-3">Overview - Today</h2>
+          <ul role="list" class="overview-cards row">
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis">
+                    <span class="visually-hidden">Facebook</span>Page Views
+                  </h3>
+                  <svg
+                    class="fb-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#fb"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">87</p>
+                  <div class="stats-progress" data-type="up">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    3%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Facebook</span>Likes
+                  </h3>
+                  <svg
+                    class="fb-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#fb"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">52</p>
+                  <div class="stats-progress" data-type="down">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    2%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Instagram</span>Likes
+                  </h3>
+                  <svg
+                    class="inst-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#inst"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">5462</p>
+                  <div class="stats-progress" data-type="up">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    2257%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Instagram</span>Profile Views
+                  </h3>
+                  <svg
+                    class="inst-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#inst"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">52k</p>
+                  <div class="stats-progress" data-type="up">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    1375%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Twitter</span>Retweets
+                  </h3>
+                  <svg
+                    class="tw-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                  >
+                    <use xlink:href="#tw"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">117</p>
+                  <div class="stats-progress" data-type="up">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    303%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Twitter</span>Likes
+                  </h3>
+                  <svg
+                    class="tw-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                  >
+                    <use xlink:href="#tw"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">507</p>
+                  <div class="stats-progress" data-type="up">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    553%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Youtube</span>Likes
+                  </h3>
+                  <svg
+                    class="yt-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#yt"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">107</p>
+                  <div class="stats-progress" data-type="down">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    19%
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overview-card card">
+                <div class="overview-card__header">
+                  <h3 class="overview-card__title ellipsis" aria-hidden="true">
+                    <span class="visually-hidden">Youtube</span>Total Views
+                  </h3>
+                  <svg
+                    class="yt-icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <use xlink:href="#yt"></use>
+                  </svg>
+                </div>
+                <div class="overview-card__stats">
+                  <p class="heading" data-type="heading-1">1407</p>
+                  <div class="stats-progress" data-type="down">
+                    <svg width="8" height="4" viewBox="0 0 8 4">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                    <span class="visually-hidden">Increased by</span>
+                    12%
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noreferrer noopener"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/sereezha"
+        target="_blank"
+        rel="noreferrer noopener"
+        >sereezha</a
+      >.
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
