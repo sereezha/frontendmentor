@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Single-page design portfolio</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/splide-core.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="primary-header">
+      <div class="container">
+        <nav>
+          <svg class="logo" viewBox="0 0 64 64">
+            <use xlink:href="images/sprite.svg#logo"></use>
+          </svg>
+          <button type="button" data-type="primary">Free Consultation</button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="intro-heading">
+        <div class="container">
+          <div class="intro-content">
+            <h1 class="heading" data-type="heading-1" id="intro-heading">
+              Design solutions made easy
+            </h1>
+            <p>
+              With over ten years of experience in various design disciplines,
+              I’m your one-stop shop for your design needs.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="skill" data-type="graphic-design">
+              <svg width="128" height="192">
+                <use
+                  xlink:href="images/sprite.svg#pattern-graphic-design"
+                ></use>
+              </svg>
+              <div class="skill-title">Graphic Design</div>
+            </div>
+            <div class="skill" data-type="ui-ux">
+              <svg width="64" height="64">
+                <use xlink:href="images/sprite.svg#pattern-ui-ux"></use>
+              </svg>
+              <div class="skill-title">UI/UX</div>
+            </div>
+            <div class="skill" data-type="apps">
+              <svg width="64" height="64">
+                <use xlink:href="images/sprite.svg#pattern-apps"></use>
+              </svg>
+              <div class="skill-title">Apps</div>
+            </div>
+            <div class="skill" data-type="photo">
+              <svg width="160" height="64">
+                <use xlink:href="images/sprite.svg#pattern-photography"></use>
+              </svg>
+              <div class="skill-title">Photography</div>
+            </div>
+            <div class="skill" data-type="illustrations">
+              <svg width="128" height="64">
+                <use xlink:href="images/sprite.svg#pattern-illustrations"></use>
+              </svg>
+              <div class="skill-title">Illustrations</div>
+            </div>
+            <div class="skill" data-type="motion-graphics">
+              <svg width="128" height="64">
+                <use
+                  xlink:href="images/sprite.svg#pattern-motion-graphics"
+                ></use>
+              </svg>
+              <div class="skill-title">Motion Graphics</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about" aria-labelledby="">
+        <div class="container">
+          <div class="about-inner">
+            <div class="about-avatar">
+              <img
+                width="445"
+                height="445"
+                src="./images/image-amy.webp"
+                alt=""
+              />
+            </div>
+            <div class="about-content">
+              <h2 class="heading" data-type="heading-2" id="about-intro">
+                I’m Amy, and I’d love to work on your next project
+              </h2>
+              <p>
+                I love working with others to create beautiful design solutions.
+                I’ve designed everything from brand illustrations to complete
+                mobile apps. I’m also handy with a camera!
+              </p>
+              <button class="about-button" type="button" data-type="accent">
+                Free Consulation
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="works" aria-labelledby="works-heading">
+        <div class="container">
+          <h2
+            class="works-heading heading"
+            data-type="heading-2"
+            id="works-heading"
+          >
+            My work
+          </h2>
+        </div>
+        <div
+          class="splide works-slider"
+          role="group"
+          aria-labelledby="works-heading"
+        >
+          <div class="splide__track works-slider-track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  width="540"
+                  height="360"
+                  src="./images/image-slide-1.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  width="540"
+                  height="360"
+                  src="./images/image-slide-2.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  width="540"
+                  height="360"
+                  src="./images/image-slide-3.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  width="540"
+                  height="360"
+                  src="./images/image-slide-4.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  width="540"
+                  height="360"
+                  src="./images/image-slide-5.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="splide__arrows works-slider-arrows">
+            <button
+              class="splide__arrow splide__arrow--prev"
+              data-type="primary"
+              data-rounded="true"
+            >
+              <svg viewBox="0 0 64 64">
+                <use xlink:href="images/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button
+              class="splide__arrow splide__arrow--next"
+              data-type="primary"
+              data-rounded="true"
+            >
+              <svg viewBox="0 0 64 64">
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="cta" aria-labelledby="cta-heading">
+        <div class="container">
+          <div class="cta-inner">
+            <div class="cta-text">
+              <h2
+                class="heading"
+                data-type="heading-2"
+                data-theme="light"
+                id="cta-heading"
+              >
+                Book a call with me
+              </h2>
+              <p>
+                I’d love to have a chat to see how I can help you. The best
+                first step is for us to discuss your project during a free
+                consultation. Then we can move forward from there.
+              </p>
+            </div>
+            <button class="cta-btn" type="button" data-type="accent">
+              Free Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <nav>
+            <svg class="logo" viewBox="0 0 64 64">
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+            <button type="button" data-type="primary">Free Consultation</button>
+          </nav>
+          <div class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Frontend Mentor</a
+            >. Coded by
+            <a
+              href="https://github.com/sereezha"
+              target="_blank"
+              rel="noreferrer noopener"
+              >sereezha</a
+            >.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/splide.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
