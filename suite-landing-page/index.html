@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Suite landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <svg width="81" height="32">
+            <use xlink:href="images/sprite.svg#logo"></use>
+          </svg>
+          <button type="button" data-type="outline">Request Beta Access</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="container">
+          <div class="intro-inner">
+            <div class="intro-content">
+              <h1 id="intro-title" class="heading" data-type="heading-1">
+                A
+                <span class="fw-bold"
+                  >super <span class="intro-solution">solution</span></span
+                >
+                for your <span class="fw-bold">business</span>.
+              </h1>
+              <p>
+                Our marketing and sales automations help you scale your outreach
+                to get more leads for your company.
+              </p>
+              <button type="button" data-type="primary">
+                Request Beta Access
+              </button>
+            </div>
+            <picture class="intro-img">
+              <source
+                width="700"
+                height="1200"
+                srcset="./images/image-hero-portrait@2x.webp"
+                media="(min-width: 768px)"
+              />
+              <img
+                width="686"
+                height="480"
+                src="./images/image-hero-landscape@2x.webp"
+                alt=""
+              />
+            </picture>
+            <ul class="intro-stats" role="list">
+              <li class="intro-stat">
+                <div class="intro-stat__amount">2k+</div>
+                <div class="intro-stat__title">companies</div>
+              </li>
+              <li class="intro-stat">
+                <div class="intro-stat__amount">8</div>
+                <div class="intro-stat__title">languages</div>
+              </li>
+              <li class="intro-stat">
+                <div class="intro-stat__amount">1.2m</div>
+                <div class="intro-stat__title">leads</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="review">
+          <div class="review-img">
+            <picture>
+              <source
+                width="351"
+                height="590"
+                srcset="./images/image-jeremy-large@2x.webp"
+                media="(min-width: 40.56em)"
+              />
+              <img
+                width="252"
+                height="395"
+                src="./images/image-jeremy-small@2x.webp"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div class="review-content">
+            <h2 class="heading review-title" data-type="heading-2">
+              It just <span class="fw-bold">works.</span>
+            </h2>
+            <blockquote>
+              “I really like how it is an all-in-one solution that handle many
+              of the tasks that you would normally need separate tools to do the
+              same job. This thing is a miracle worker.”
+            </blockquote>
+            <div class="review-info">
+              <div class="review-author fw-bold">JEREMY ROBINSON</div>
+              <div class="review-author-job">CMO, FYLO</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <svg width="81" height="32">
+            <use xlink:href="images/sprite.svg#logo"></use>
+          </svg>
+          <small class="footer-copyright">Copyright - Suite</small>
+          <ul role="list" class="socials">
+            <li class="social">
+              <a href="/" aria-label="Facebook">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social">
+              <a href="/" aria-label="Twitter">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social">
+              <a href="/" aria-label="Instagram">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/sereezha"
+            target="_blank"
+            rel="noreferrer noopener"
+            >sereezha</a
+          >.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -304,12 +304,12 @@ nav {
 }
 
 .works {
-  margin-bottom: 10rem;
+  margin-block-end: 10rem;
   text-align: center;
 }
 
 .works-heading {
-  margin-bottom: 3.2rem;
+  margin-block-end: 3.2rem;
 }
 
 .works-slider {
@@ -329,7 +329,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1.6rem;
-  padding-top: 5.6rem;
+  padding-block-start: 5.6rem;
 }
 
 .cta {
@@ -446,11 +446,11 @@ nav {
   }
 
   .works {
-    margin-bottom: 12rem;
+    margin-block-end: 12rem;
   }
 
   .works-heading {
-    margin-bottom: 5.6rem;
+    margin-block-end: 5.6rem;
   }
 
   .cta {
@@ -504,7 +504,7 @@ nav {
   }
 
   .works {
-    margin-bottom: 8.8rem;
+    margin-block-end: 8.8rem;
   }
 
   .cta-inner {
