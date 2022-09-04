@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     perPage: 1,
     padding: "10%",
     gap: "1.5rem",
+    pagination: false,
     breakpoints: {
       768: {
         perPage: 2,

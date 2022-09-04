@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Insure landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <svg viewBox="0 0 112 18" width="112px" height="18px">
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+            <div class="header-right">
+              <div class="header-nav" id="header-nav">
+                <ul class="header-nav-list" role="list">
+                  <li>
+                    <a class="nav-link" data-type="header" href="#"
+                      >HOW WE WORK</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-link" data-type="header" href="#">BLOG</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" data-type="header" href="#">ACCOUNT</a>
+                  </li>
+                </ul>
+                <button
+                  class="header-button"
+                  type="button"
+                  data-color="dark"
+                  data-type="default"
+                >
+                  View plans
+                </button>
+              </div>
+              <button
+                class="hamburger"
+                type="button"
+                aria-controls="header-nav"
+                aria-expanded="false"
+              >
+                <svg
+                  class="hamburger-open"
+                  data-visible="true"
+                  viewBox="0 0 32 32"
+                  width="32"
+                  height="32"
+                >
+                  <use xlink:href="./images/sprite.svg#icon-hamburger"></use>
+                </svg>
+                <svg
+                  class="hamburger-close"
+                  data-visible="false"
+                  viewBox="0 0 32 32"
+                  width="32"
+                  height="32"
+                >
+                  <use xlink:href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="hero" aria-labelledby="">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-img">
+              <img
+                width="540"
+                height="650"
+                src="./images/image-intro-desktop.jpg"
+                alt=""
+              />
+            </div>
+            <div class="hero-content">
+              <h1 class="heading" data-color="light" data-type="heading-0">
+                Humanizingy our insurance.
+              </h1>
+              <p>
+                Get your life insurance coverage easier and faster. We blend our
+                expertise and technology to help you find the plan that’s right
+                for you. Ensure you and your loved ones are protected.
+              </p>
+              <div class="hero-button">
+                <button type="button" data-color="light" data-type="default">
+                  View plans
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="features-inner">
+          <h2
+            class="heading features-title"
+            data-color="dark"
+            data-type="heading-1"
+            id="features-title"
+          >
+            We’re different
+          </h2>
+          <div class="features-row">
+            <div class="feature">
+              <svg width="86" height="86" viewBox="0 0 86 86">
+                <use xlink:href="images/sprite.svg#icon-snappy-process"></use>
+              </svg>
+              <div class="feature-content">
+                <h3 class="heading" data-type="heading-3">Snappy Process</h3>
+                <p>
+                  Our application process can be completed in minutes, not
+                  hours. Don’t get stuck filling in tedious forms.
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg width="86" height="86" viewBox="0 0 86 86">
+                <use
+                  xlink:href="images/sprite.svg#icon-affordable-prices"
+                ></use>
+              </svg>
+              <div class="feature-content">
+                <h3 class="heading" data-type="heading-3">Affordable Prices</h3>
+                <p>
+                  We don’t want you worrying about high monthly costs. Our
+                  prices may be low, but we still offer the best coverage
+                  possible.
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg width="86" height="86" viewBox="0 0 86 86">
+                <use xlink:href="images/sprite.svg#icon-people-first"></use>
+              </svg>
+              <div class="feature-content">
+                <h3 class="heading" data-type="heading-3">People First</h3>
+                <p>
+                  Our plans aren’t full of conditions and clauses to prevent
+                  payouts. We make sure you’re covered when you need it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="cta" aria-labelledby="cta-title">
+        <h2
+          class="heading cta-title"
+          data-color="light"
+          data-type="heading-2"
+          id="cta-title"
+        >
+          Find out more about how we work
+        </h2>
+        <button type="button" data-color="light" data-type="default">
+          How we work
+        </button>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <svg viewBox="0 0 112 18" width="112px" height="18px">
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+            <ul class="socials" role="list">
+              <li class="socials-item">
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a href="#">
+                  <svg width="24" height="20" viewBox="0 0 24 20">
+                    <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="images/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <div class="footer-nav">
+            <div class="footer-nav-item">
+              <div class="footer-nav-title">OUR COMPANY</div>
+              <ul class="footer-nav-list" role="list">
+                <li>
+                  <a href="#" class="nav-link" data-type="footer"
+                    >HOW WE WORK</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer"
+                    >WHY INSURE?</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">VIEW PLANS</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">REVIEWS</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-nav-item">
+              <div class="footer-nav-title">HELP ME</div>
+              <ul class="footer-nav-list" role="list">
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">FAQ</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer"
+                    >TERMS OF USE</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer"
+                    >PRIVACY POLICY</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">COOKIES</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-nav-item">
+              <div class="footer-nav-title">CONTACT</div>
+              <ul class="footer-nav-list" role="list">
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">SALES</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">SUPPORT</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">LIVE CHAT</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-nav-item">
+              <div class="footer-nav-title">OTHERS</div>
+              <ul class="footer-nav-list" role="list">
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">CAREERS</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">PRESS</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="footer">LICENSES</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Frontend Mentor</a
+            >. Coded by
+            <a
+              href="https://github.com/sereezha"
+              target="_blank"
+              rel="noreferrer noopener"
+              >sereezha</a
+            >.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
