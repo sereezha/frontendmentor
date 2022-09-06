@@ -110,7 +110,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.625;
   font-family: "Karla", sans-serif;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   color: var(--clr-text-primary);
 }
 
@@ -463,7 +463,7 @@ footer::before {
 
 @media screen and (min-width: 31.25em) {
   .hero-img {
-    max-width: 400px;
+    max-width: 40rem;
     margin-inline: auto;
   }
 }
@@ -691,7 +691,7 @@ footer::before {
 @media screen and (min-width: 62em) {
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 540px);
+    grid-template-columns: 1fr minmax(30rem, 54rem);
     grid-template-rows: auto 15.5rem;
     gap: 3rem;
     align-items: start;

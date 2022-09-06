@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Art gallery website</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/location.css" />
+  </head>
+  <body>
+    <a
+      href="./index.html"
+      class="location-button button"
+      data-direction="reversed"
+    >
+      <span class="button-content">BACK TO HOME</span>
+      <span class="button-icon">
+        <svg class="arrow-icon" viewBox="0 0 10 24" width="10" height="24">
+          <use xlink:href="./images/sprite.svg#icon-arrow-right"></use></svg
+      ></span>
+    </a>
+    <div class="map">
+      <picture>
+        <source
+          width="1440"
+          height="600"
+          srcset="./images/desktop/image-map@2x.png 2x"
+          media="(min-width: 62em)"
+        />
+        <source
+          width="768"
+          height="600"
+          srcset="./images/tablet/image-map@2x.png 2x"
+          media="(min-width: 40.625em)"
+        />
+        <source
+          width="375"
+          height="550"
+          srcset="./images/mobile/image-map@2x.png 2x"
+        />
+        <img
+          width="375"
+          height="550"
+          src="./images/mobile/image-map.png"
+          alt=""
+        />
+      </picture>
+    </div>
+    <section class="location" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="location-inner">
+          <h1
+            class="heading"
+            data-size="l"
+            data-theme="light"
+            id="location-heading"
+          >
+            Our location
+          </h1>
+          <address class="location-content clr-white">
+            <div class="heading" data-size="s" data-theme="gold">
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://www.google.com/maps/place/99+King+St,+Newport,+RI+02840,+USA/data=!4m2!3m1!1s0x89e5af5d9ad9f351:0x9bf38f9aed123934?sa=X&ved=2ahUKEwiRqdL-0oD6AhXFUXcKHS60AZ4Q8gF6BAgZEAE"
+                >99 King Street</a
+              >
+            </div>
+            <div>
+              Newport <br />
+              RI 02840 <br />
+              United States of America
+            </div>
+            <p>
+              Our newly opened gallery is located near the Edward King House on
+              99 King Street, the Modern Art Gallery is free to all visitors and
+              open seven days a week from 8am to 9pm.
+            </p>
+          </address>
+        </div>
+      </div>
+    </section>
+    <footer data-theme="gold">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="logo" data-theme="dark">
+            <svg viewBox="0 0 111 40">
+              <use xlink:href="./images/sprite.svg#logo"></use>
+            </svg>
+          </div>
+          <p data-size="s">
+            The Modern Art Gallery is free to all visitors and open seven days a
+            week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+          </p>
+          <ul class="socials" role="list">
+            <li>
+              <a href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="20" height="17" viewBox="0 0 20 17">
+                  <use xlink:href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+.location {
+  padding-block: 4.8rem 5.6rem;
+  background-color: var(--clr-almost-black);
+}
+
+.location-inner {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.location-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.location-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map picture,
+.map img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 48em) {
+  .location-inner {
+    grid-template-columns: 22.5rem 1fr;
+    gap: 6.8rem;
+  }
+
+  .location-button {
+    left: var(--container-hor-padding);
+  }
+
+  .map picture,
+  .map img {
+    max-height: 50rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .location-inner {
+    grid-template-columns: 35rem 1fr;
+    justify-content: space-between;
+  }
+
+  .map picture,
+  .map img {
+    max-height: 80rem;
+  }
+}
