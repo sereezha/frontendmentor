@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="header">
+            <div class="logo" data-type="light">
+              <svg>
+                <use xlink:href="./images/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <button
+              class="hamburger js-hamburger"
+              aria-expanded="false"
+              aria-controls="header-right"
+              aria-label="Open navigation"
+              aria-live="polite"
+            >
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-hamburger"></use>
+              </svg>
+            </button>
+            <div class="header-right js-header-right" id="header-right">
+              <nav class="header-nav" aria-label="Header">
+                <ul role="list">
+                  <li>
+                    <a href="#" class="nav-link" data-type="light">About</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link" data-type="light">Services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link" data-type="light">Projects</a>
+                  </li>
+                </ul>
+              </nav>
+              <button class="button" type="button">Contact</button>
+            </div>
+          </div>
+          <div class="hero-content">
+            <h2
+              id="hero-title"
+              class="heading text-uppercase"
+              data-color="white"
+              data-size="xl"
+            >
+              We are creatives
+            </h2>
+            <a class="hero-arrow" href="#about">
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="about" id="about" aria-label="About">
+      <div class="about-item" data-type="transform" data-reversed>
+        <picture class="about-img">
+          <img
+            src="./images/desktop/image-transform.jpg"
+            width="720"
+            height="600"
+            alt=""
+          />
+        </picture>
+        <div class="about-content">
+          <h2 class="heading" data-size="l">Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a href="#" class="link about-link">learn more</a>
+        </div>
+      </div>
+      <div class="about-item" data-type="stand-out">
+        <picture class="about-img">
+          <img
+            src="./images/desktop/image-stand-out.jpg"
+            width="720"
+            height="600"
+            alt=""
+          />
+        </picture>
+        <div class="about-content">
+          <h2 class="heading" data-size="l">Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <a href="#" class="link about-link">learn more</a>
+        </div>
+      </div>
+    </section>
+    <section class="features" aria-label="Features">
+      <ul class="features-list" role="list">
+        <li class="feature" data-feature="graphic-design">
+          <div class="feature-content">
+            <h2 class="heading" data-size="m">Graphic Design</h2>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </li>
+        <li class="feature" data-feature="photography">
+          <div class="feature-content">
+            <h2 class="heading" data-size="m">Photography</h2>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="review" aria-labelledby="review-title">
+      <div class="container">
+        <div class="review-inner">
+          <h2
+            id="review-title"
+            class="heading text-uppercase"
+            data-size="xs"
+            data-color="gray"
+          >
+            CLIENT TESTIMONIALS
+          </h2>
+          <ul class="reviews" role="list">
+            <li class="reviews-item">
+              <img
+                src="./images/image-emily.jpg"
+                alt=""
+                class="review-img"
+                width="72"
+                height="72"
+              />
+              <p>
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <div class="review-about">
+                <div class="heading" data-size="s">Emily R.</div>
+                <div class="review-job">Marketing Director</div>
+              </div>
+            </li>
+            <li class="reviews-item">
+              <img
+                src="./images/image-thomas.jpg"
+                alt=""
+                class="review-img"
+                width="72"
+                height="72"
+              />
+              <p>
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+              </p>
+              <div class="review-about">
+                <div class="heading" data-size="s">Thomas S.</div>
+                <div class="review-job">Chief Operating Officer</div>
+              </div>
+            </li>
+            <li class="reviews-item">
+              <img
+                src="./images/image-jennie.jpg"
+                alt=""
+                class="review-img"
+                width="72"
+                height="72"
+              />
+              <p>
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <div class="review-about">
+                <div class="heading" data-size="s">Jennie F.</div>
+                <div class="review-job">Business Owner</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="gallery" aria-label="Gallery">
+      <picture>
+        <source
+          width="360"
+          height="447"
+          media="(min-width: 48em)"
+          srcset="./images/desktop/image-gallery-milkbottles.jpg"
+        />
+        <img
+          width="188"
+          height="188"
+          src="./images/mobile/image-gallery-milkbottles.jpg"
+          alt="Image with bottle"
+        />
+      </picture>
+      <picture>
+        <source
+          width="360"
+          height="447"
+          media="(min-width: 48em)"
+          srcset="./images/desktop/image-gallery-orange.jpg"
+        />
+        <img
+          width="188"
+          height="188"
+          src="./images/mobile/image-gallery-orange.jpg"
+          alt="Image with orange"
+        />
+      </picture>
+      <picture>
+        <source
+          width="360"
+          height="447"
+          media="(min-width: 48em)"
+          srcset="./images/desktop/image-gallery-cone.jpg"
+        />
+        <img
+          width="188"
+          height="188"
+          src="./images/mobile/image-gallery-cone.jpg"
+          alt="Image with cone"
+        />
+      </picture>
+      <picture>
+        <source
+          width="360"
+          height="447"
+          media="(min-width: 48em)"
+          srcset="./images/desktop/image-gallery-sugarcubes.jpg"
+        />
+        <img
+          width="188"
+          height="188"
+          src="./images/mobile/image-gallery-sugarcubes.jpg"
+          alt="Image with sugarcubes"
+        />
+      </picture>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-row">
+            <div class="logo" data-type="cyan">
+              <svg>
+                <use xlink:href="./images/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <nav aria-label="Footer">
+              <ul class="footer-nav-list" role="list">
+                <li><a href="#" class="nav-link" data-type="cyan">About</a></li>
+                <li>
+                  <a href="#" class="nav-link" data-type="cyan">Services</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-type="cyan">Projects</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-row">
+            <ul class="socials" role="list">
+              <li>
+                <a href="#" aria-label="Facebook">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Twitter">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Pinterest">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Frontend Mentor</a
+              >. Coded by
+              <a
+                href="https://github.com/sereezha"
+                target="_blank"
+                rel="noreferrer noopener"
+                >sereezha</a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
